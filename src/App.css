@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.function-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.function-box {
+  width: 255px;
+  height: 270px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+#box1 {
+  left: 200px;
+  top: 50px;
+}
+
+#box2 {
+  left: 600px;
+  top: 50px;
+ 
+}
+
+#box3 { 
+  right: 200px;
+  top: 50px;
+}
+
+#box4 {
+  left: 350px;
+  top: 400px;
+}
+
+#box5 {
+  right: 350px;
+  top: 400px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.dots {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #BCBCBC;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #578CF6;
+    z-index: 2;
   }
 }
+ 
+.input-container {
+  position: absolute;
+  top: 246px;
+  left: 50px;
+  z-index: 3;
+}
+
+.output-container {
+  position: absolute;
+  top: 246px;
+  right: 50px;
+}
+
+.input-label, .output-label {
+  background-color: #daa655;
+  padding: 2px 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 450;
+}
+
+.input-box, .output-box {
+  width: 110px;
+  height: 45px;
+  border-radius: 14px;
+  border: 2px solid #daa655;
+  margin-top: 5px;
+  padding-left: 2px;
+  display: flex;
+
+  input {
+    padding-left: 20px;
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    border-right: 0.5px solid #d8d8d8;
+    outline: none;
+  }
+}
+
+.output-box {
+  border: 2px solid  #66ac7d;
+
+   input {
+    border-left: 0.5px solid #d8d8d8;;
+  }
+}
+
+.output-label {
+  background-color: #66ac7d;
+}
+
+
+
+.equation-txt {
+  font-weight: 500;
+  color: rgb(49, 49, 49);
+  font-size: 13px;
+}
+
+
+.equation-input, .function-input {
+  width: 100%;
+  height: 34px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #DBDBDB;
+  padding-left: 10px;
+  margin-top: 1px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.function-input {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0px 4px;
+   background-color: #F7F7F7;
+
+   input {
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    font-weight: 500;
+    color: #BCBCBC;
+   }
+
+   svg {
+    width: 20px;
+    fill: gray;
+   }
+}
+
+.input-output-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  p{
+    font-size: 12.5px;
+    color: rgb(87, 87, 87);
+    font-weight: 500;
+  }
+}
+
+.function-head {
+  display: flex;
+  align-items: center;
+
+  p{
+    font-weight: 600;
+    color: gray;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  svg {
+    width: 20px;
+    rotate: 90deg;
+    fill: gray;
+  }
+}
+
+
