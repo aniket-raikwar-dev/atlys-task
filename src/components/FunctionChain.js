@@ -366,7 +366,7 @@ const FunctionChain = () => {
           <input type="number" value={outputValue} readOnly />
         </div>
       </div>
-      <canvas ref={canvasRef} width="1300" height="700" />
+      <canvas ref={canvasRef} width="1500" height="750" />
     </div>
   );
 };
